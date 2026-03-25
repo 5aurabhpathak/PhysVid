@@ -79,19 +79,16 @@ torchrun --nproc_per_node 8 physvid/evaluation/eval.py --config_path configs/eva
 
 The results from our own evaluation in the paper are shown below.
 
-<!-- Two slide-like cards side-by-side; each card frames one image and preserves its aspect ratio -->
-<div style="display:flex; justify-content:center;">
-  <div style="width:100%; max-width:1200px; display:flex; gap:16px; flex-wrap:wrap; justify-content:center;">
-    <!-- Card 1 -->
-    <div style="flex:1 1 48%; min-width:280px; background:#ffffff; border:1px solid #e6eef6; box-shadow:0 6px 18px rgba(15,23,42,0.08); border-radius:8px; padding:12px; height:280px; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-      <img src="docs/assets/results_table.png" alt="Evaluation results table" style="max-width:100%; max-height:100%; object-fit:contain;" />
-    </div>
-    <!-- Card 2 -->
-    <div style="flex:1 1 48%; min-width:280px; background:#ffffff; border:1px solid #e6eef6; box-shadow:0 6px 18px rgba(15,23,42,0.08); border-radius:8px; padding:12px; height:280px; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-      <img src="docs/assets/results_graph.png" alt="Evaluation results graph" style="max-width:100%; max-height:100%; object-fit:contain;" />
-    </div>
-  </div>
-</div>
+<table align="center">
+  <tr>
+    <td align="center" valign="middle">
+      <img src="docs/assets/results_table.png" alt="Evaluation results table" width="440" />
+    </td>
+    <td align="center" valign="middle">
+      <img src="docs/assets/results_graph.png" alt="Evaluation results graph" width="440" />
+    </td>
+  </tr>
+</table>
 
 
 ## Training  

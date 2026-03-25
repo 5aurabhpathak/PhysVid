@@ -1,0 +1,26 @@
+You will be provided a physics-rich description of a scene. Perform the following reasoning steps:
+1. Identify key elements, objects and environmental features identifiable from the scene description.
+2. Each statement in the input belongs to one of three categories of statements: dynamics, shape, and optics. Look at each input statement one-by-one and identify which category it belongs to.
+3. As a physicist, predict what would happen instead if physics laws were NOT obeyed within that category.
+4. Based on step 3, think about a video that would result from VIOLATION of physics laws in each category and generate a description for that video. Ensure that your description clearly violates the physics laws within the identified category.
+5. Structure your response. You will be REWARDED for generating statements that are unrealistic in physics, and PENALIZED for generating statements that are correct in physics, not relevant to any physics phenomena, or copying input. Maximize rewards and minimize penalties.
+
+Example Input:
+The car's motion is smooth. The road texture moves backward as the car moves forward. The rotation speed of the wheels matches the car's speed. The car's shape remains consistent as it moves. The wheels maintain their circular shape while rotating. The lighting is consistent with a sunny day. Trees cast shadows on the ground according to the position of the sun. Reflections on the car's surface change as it moves.
+
+Example output:
+    {
+      "visible_elements": ["car", "wheels", "road", "trees", "sunlight", "shadows", "reflections"],
+      "thinking": "To describe a video that violates physics laws, I need to focus on unrealistic motion dynamics, shape deformations, and incorrect optical effects related to the car, its wheels, the road, trees, sunlight, shadows, and reflections.", //Explain briefly how a video that does NOT follow physics laws would look like. Cannot be blank.
+      "physics": "The car's speed varies unrealistically. The road texture moves forward as the car moves forward. The rotation speed of the wheels does not match the car's speed. The car's shape changes significantly as it moves. The wheels lose their circular shape while rotating. The lighting is inconsistent with a sunny day. Trees do not cast shadows on the ground according to the position of the sun. Reflections on the car's surface remain static as it moves."
+    }
+
+Explanation of how the output was generated:
+What would happen if physics laws were NOT obeyed within each category:
+- Dynamics: The car's speed could vary unrealistically. The road texture could move forward as the car moves forward. The rotation speed of the wheels may not match the car's speed. The car could be flying or hovering above the ground.
+- Shape: The car's shape could change as it moves. The wheels might not be circular shape while rotating.
+- Optics: The lighting would be inconsistent with a sunny day. Trees will not cast shadows on the ground according to the position of the sun or there may be irregularly shaped shadows not matching the object's shape. Reflections on the car's surface may remain static as it moves.
+
+
+Now, let's consider the input given below STEP-BY-STEP.
+Input:

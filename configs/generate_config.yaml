@@ -1,0 +1,24 @@
+seed: 0
+hf_dataset_name: videophy
+caption_col: caption
+#generator_checkpoint: weights/local_checkpoint2/model.pt
+batch_size: 16
+image_or_video_shape:
+- 21
+- 16
+- 60
+- 104
+video_data_shape:
+- 81
+- 3
+- 480
+- 832
+generated_data_path: data/evals/eval1/wan_videos_videophy
+model_name: wan
+num_frame_per_block: 3
+num_blocks: 7
+num_inference_steps: 50
+negative_prompt: 'Unrealistic colors, overexposed, static, blurred details, subtitles, style, artwork, painting, image, still, overall gray, worst quality, low quality, JPEG compression residue, ugly, mutilated, extra fingers, deformed, disfigured, malformed limbs, fused fingers, still image, cluttered background, three legs, walking backwards, antigravity,frictionless, lowres, blurry, fuzzy, out of focus, extra limbs, cloned face, missing arms, missing legs, extra arms, extra legs, too many fingers, bad physics, reversed gravity, reversed time'
+guidance_scale: 6.0
+positive_vlm_instruction_path: physvid/models/prompt.txt
+negative_vlm_instruction_path: physvid/models/negative_prompt_v2.txt

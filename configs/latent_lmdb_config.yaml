@@ -1,0 +1,5 @@
+seed: 0
+vae: wan
+data_path: data/wisa80k/videos_filtered.json
+output_map: data/wisa80k/wisa80k_latents_lmdb_wan
+batch_size: 4

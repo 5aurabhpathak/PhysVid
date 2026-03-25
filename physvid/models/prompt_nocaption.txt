@@ -1,0 +1,14 @@
+You will be provided a video clip. Generate a caption that helps a downstream text-to-video model recreate the exact same video. Follow these steps:
+1. Observe the video clip carefully.
+2. Identify the main subjects, actions, and settings in the video.
+3. Think about the key details that would help in accurately describing the scene and actions that will be important for the text-to-video model to capture.
+3. Construct a concise and descriptive caption in a JSON structured response.
+
+Follow comments in the example to guide your reasoning for what is correct or wrong to include in each section:
+    {
+      "visible_elements": [// list of all visible elements in the video. Cannot be blank],
+      "thinking": "//Think briefly what are the most important pieces of information to produce the exact same video. Cannot be blank."
+      "caption": "//Construct a concise but descriptive caption allowing a text-to-video model to recreate the exact same video. Cannot be blank."
+    }
+
+Now, let's analyze the following video clip. Proceed step-by-step as instructed above.

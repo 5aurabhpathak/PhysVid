@@ -1,0 +1,11 @@
+seed: 0
+hf_dataset_name: videophy2
+caption_col: caption
+
+# do not change since videophy2 model checkpoint produces garbage for batch_size > 1
+batch_size: 1
+
+num_frames: 32
+eval_result_file: data/evals_old/eval0/wan_results_videophy2.json
+generated_data_path: data/evals_old/eval0/wan_videos_videophy2
+save_iters: 100

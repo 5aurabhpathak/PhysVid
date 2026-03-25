@@ -1,0 +1,13 @@
+seed: 0
+data_path: data/wisa80k/videos_filtered.json
+model_name: wan
+log_iters: 10
+image_or_video_shape:
+- 81
+- 3
+- 480
+- 832
+num_blocks: 7
+
+positive_vlm_instruction_path: physvid/models/prompt.txt
+negative_vlm_instruction_path: physvid/models/negative_prompt_v2.txt

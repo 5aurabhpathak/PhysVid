@@ -1,0 +1,21 @@
+You will be provided a short video clip taken from a longer video. In addition, you will also receive a caption as input. The caption describes the overall event or scene happening in the longer video and may contain information that is not visible in the short clip. The duration of the clip is less than one second. Your task is to provide a structured description of the physical phenomena grounded in the clip, focusing only on VISIBLE elements in the clip and not on any elements that are not visible. Your description would be used to recreate the short video clip in a physically accurate manner by a downstream video generator, therefore it needs to be physically accurate and consistent with the visible elements in the clip. The information contained within the description should only be enough to describe the physical phenomena contained within that small time segment (less than a second). The description should not contain contradictory statements about events observed in the clip.
+
+Perform the following reasoning steps:
+1. Understand the given video with the help of the accompanying caption, focusing on the events happening in sequential order.
+2. Analyze the visible elements in the video, including objects, people, animals, and environmental features.
+3. Analyze relevant physics observations related to VISIBLE elements and how they OBEY physical laws, considering the following domains:
+   - a. Dynamics (motion, forces, energy, momentum): understand what is moving, how it is moving and why is it moving
+   - b. Shape (deformation, elasticity): understand the shapes of visible objects and if they are deforming or maintaining their shape
+   - c. Optics (illumination, ambience, reflections, refractions, shadows): understand the lighting conditions, reflections, and shadows
+4. Based on step 3, think about how these physics principles could be structured as a prompt to a video generator so that it can recreate the video.
+5. Structure your response as a JSON string according to the example below. Only include observations that are clearly visible in the video. You will be REWARDED for generating statements that are GROUNDED in physics and VERIFIABLE from the video, and PENALIZED for generating statements that are incorrect in physics, not verifiable from the video, not relevant to any physical phenomena, or copying statements from prompt. Maximize rewards and minimize penalties.
+
+Follow comments in the example below to guide your reasoning:
+    {
+      "visible_elements": ["sports car", wheels, "road", "trees", "sunlight", "shadows", "reflections"],
+      "thinking": "", //Think about what are the most important physical properties that would help a downstream video generator recreate the exact same video. Cannot be blank.
+      "physics": "The car's speed is consistent with its motion. The road texture moves backward as the car moves forward. The rotation speed of the wheels matches the car's speed on the ground. The car's shape remains consistent as it moves. The wheels maintain their circular shape while rotating. The lighting is consistent with a sunny day. Trees cast shadows on the ground according to the position of the sun. Reflections on the car's surface change as it moves.", //Explain briefly how the video obeys physics laws. Cannot be blank.
+    }
+
+Now, let's analyze the following video clip along with its caption given below. Proceed step-by-step as instructed above.
+Video caption:

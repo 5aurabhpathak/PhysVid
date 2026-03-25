@@ -1,0 +1,32 @@
+You will be provided a caption describing an event or a scene. Your task is to provide a set of SEVEN captions describing the physical phenomena grounded in the original caption. The set of captions would be used to generate a video that is physically accurate and grounded in the original caption. Each caption would be used sequentially by the downstream video generator to generate a short chunk of video. Each caption therefore needs to be physically accurate and consistent with the original caption. Each caption should describe a small time segment of the overall event or scene. The set of captions should together cover the entire event or scene described in the original caption leading to a coherent video when stitched together. The information contained within each caption should only be enough to describe the physical phenomena contained within the corresponding small time segment (less than a second). A caption should not describe an event that is not possible within the small time segment, but it can build on events from previous segments. Do not describe any elements that are not visible in the scene or are impossible to visualize. Do not output any statements that directly contradict the input.
+
+Perform the following reasoning steps:
+1. Imagine a short, few seconds scene based on the caption. Identify key elements, objects and environmental features identifiable from the caption that may be visible in the scene. Do not include any elements that are not visible.
+2. Analyze relevant physics observations related to these elements and how they OBEY physical laws, considering the following domains:
+   - a. Dynamics (motion, forces, energy, momentum): understand what is moving, how it is moving and why is it moving
+   - b. Shape (deformation, elasticity): understand the shapes of objects as mentioned in the caption and if they are deforming or maintaining their shape
+   - c. Optics (illumination, ambience, reflections, refractions, shadows): understand the lighting conditions, reflections, and shadows
+3. Based on step 2, think about how these physics principles could be structured as a set of seven temporally correlated prompt sequence to a video generator so that it can recreate the scene described in the original input caption.
+4. Structure your response as a JSON string according to the example below. Output only those statements that are relevant to the input. You will be REWARDED for generating statements that are GROUNDED in physics and the original input, and PENALIZED for generating statements that are incorrect in physics, completely unrelated to the input, not relevant to any physical phenomena, or copying statements from input. Maximize rewards and minimize penalties.
+
+Example Input:
+A car moving along the road on a sunny day.
+
+Example Output (follow the comments in the code for instructions on how to generate outputs):
+    {
+      "thinking": "To describe a video that follows physics laws, I need to focus on realistic motion dynamics, shape consistency, and accurate optical effects related to the car, its wheels, the road, trees, sunlight, shadows, and reflections.", //Think about what are the most important physical properties that would help a downstream video generator produce the exact same video. Cannot be blank.
+      "visible_elements": ["sports car", wheels, "road", "trees", "sunlight", "shadows", "reflections"],
+      "physics": [
+                    "The car accelerates smoothly along the road, with its speed consistent with its motion.",
+                    "The road texture moves backward relative to the car's forward motion, creating a realistic sense of movement.",
+                    "The wheels rotate at a speed that matches the car's forward velocity, ensuring proper traction and motion dynamics.",
+                    "The car maintains its shape as it moves, with no visible deformations or alterations.",
+                    "The wheels retain their circular shape while rotating, demonstrating structural integrity.",
+                    "The lighting conditions reflect a sunny day, with consistent brightness and color throughout the scene.",
+                    "Trees cast accurate shadows on the ground based on the sun's position, enhancing the realism of the environment."
+                  ] //Describe SEVEN different temporally correlated captions that help recreate the imaginary video that obeys physical laws. Each caption should describe a small time segment of the overall event or scene described in the original caption leading to a coherent video when stitched together. Each caption should be physically accurate and consistent with the original input and the preceding captions.
+    }
+
+
+Now, let's analyze the following caption. Proceed step-by-step as instructed above.
+Caption:

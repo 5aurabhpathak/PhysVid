@@ -6,7 +6,7 @@
 
 [![Arxiv](https://img.shields.io/badge/arXiv-2509.21309-b31b1b.svg?style=flat&logo=arxiv)](https://arxiv.org/abs/TBD)
 [![Project Page](https://img.shields.io/badge/Project-Page-green?style=flat)](https://5aurabhpathak.github.io/PhysVid)
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Model-FF4F1D.svg?style=flat&logo=Huggingface)](https://huggingface.co/5aurabhpathak/physvid/tree/main)
+[![Hugging Face](https://img.shields.io/badge/HuggingFace-Model-FF4F1D.svg?style=flat&logo=Huggingface)](https://huggingface.co/5aurabhpathak/physvid/tree/main)
 
 <p class="authors">
         <a href="#" target="_blank" rel="noopener">Saurabh Pathak</a><sup>1</sup>

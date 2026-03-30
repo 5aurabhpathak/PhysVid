@@ -4,7 +4,7 @@
   <emph style="font-size:20px;">CVPR 2026</emph>
 </div>
 
-[![Arxiv](https://img.shields.io/badge/arXiv-2509.21309-b31b1b.svg?style=flat&logo=arxiv)](https://arxiv.org/abs/TBD)
+[![Arxiv](https://img.shields.io/badge/arXiv-2603.26285-b31b1b.svg?style=flat&logo=arxiv)](https://arxiv.org/abs/2603.26285)
 [![Project Page](https://img.shields.io/badge/Project-Page-green?style=flat)](https://5aurabhpathak.github.io/PhysVid)
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-Model-FF4F1D.svg?style=flat&logo=Huggingface)](https://huggingface.co/5aurabhpathak/physvid/tree/main)
 
